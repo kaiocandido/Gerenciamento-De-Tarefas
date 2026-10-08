@@ -6,12 +6,12 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatIconModule } from "@angular/material/icon";
 import { MatInputModule } from "@angular/material/input";
 import { MatSelectModule } from '@angular/material/select';
-import { TaskItemComponent } from "../taskItem/TaskItem.component";
 import { TaskService } from "../../services/Task.service";
 import { TaskPriority } from "../../models/Task.models";
+import { TaskItemComponent } from "../taskItem/taskItem.component";
 
 @Component({
-  selector: "app-task-lis",
+  selector: "app-task-list",
   standalone: true,
   imports: [
     CommonModule,

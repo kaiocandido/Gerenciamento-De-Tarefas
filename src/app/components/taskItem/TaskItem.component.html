@@ -1,12 +1,12 @@
-<mat-card [class.completed]="task().status === 'Concluida'">
+<mat-card [class.completed]="task()?.status === 'Concluida'">
   <mat-card-content>
     <div class="task-content">
-      <mat-checkbox [checked]="task().status == 'Concluida'" (change)="toggle.emit()">
+      <mat-checkbox [checked]="task()?.status == 'Concluida'" (change)="toggle.emit()">
       </mat-checkbox>
       <div class="task-info">
-        <span class="title">{{task().title}}</span>
+        <span class="title">{{task()?.title}}</span>
         <div class="tags">
-          <mat-chip [class]="task().priority.toLowerCase()">{{task().priority}}</mat-chip>
+          <mat-chip [class]="task()?.priority.toLowerCase()">{{task()?.priority}}</mat-chip>
         </div>
       </div>
       <button mat-icon-button color="warn" (click)="delete.emit()">

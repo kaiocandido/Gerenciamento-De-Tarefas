@@ -4,6 +4,12 @@
 </mat-toolbar>
 
 <main class="container">
-  <!--@defer(on idle; on hover){} -->
+  @defer(on idle; on hover){
+    <app-task-stats />
+
+  } @placeholder {
+    <div class="stats-placeholder">Carregando Dashboard</div>
+  }
 <app-task-filters/>
+<app-task-list/>
 </main>

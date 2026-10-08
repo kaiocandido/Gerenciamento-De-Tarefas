@@ -1,18 +1,20 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { TaskFiltersComponent } from './components/taskFilters/taskFilters.component';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbar } from '@angular/material/toolbar';
+import { taskListComponent } from './components/taskList/taskList.component';
+import { TasksComponents } from './components/taskstats/taskstats.component';
 
 @Component({
   imports: [
-    RouterOutlet,
     TaskFiltersComponent,
     CommonModule,
     MatIconModule,
     TaskFiltersComponent,
-    MatToolbar
+    MatToolbar,
+    taskListComponent,
+    TasksComponents,
   ],
   selector: 'app-root',
   styleUrl: './app.scss',

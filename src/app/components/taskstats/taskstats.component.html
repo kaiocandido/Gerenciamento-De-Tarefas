@@ -5,18 +5,18 @@
   <mat-card-content>
     <div class="stats-grid">
       <div class="stats-item">
-        <span class="label">Total</span>
+        <span class="label">Total </span>
         <span class="value">{{stats().total}}</span>
       </div>
       <div class="stats-item">
-        <span class="label">Concluidas</span>
+        <span class="label">Concluidas </span>
         <span class="value">{{stats().completed}}</span>
       </div>
     </div>
 
     <div class="progress-section">
       <div class="progress-header">
-        <span>Conclusão</span>
+        <span>Conclusão </span>
         <span>{{stats().progress}}%</span>
       </div>
       <mat-progress-bar mode="determinate" [value]="stats().progress"></mat-progress-bar>

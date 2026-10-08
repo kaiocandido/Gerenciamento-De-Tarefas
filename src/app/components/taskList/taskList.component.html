@@ -1,18 +1,18 @@
 <div class="add-task-form">
   <mat-form-field appearance="fill">
     <mat-label>Nova Tarefa</mat-label>
-    <input #taskInput matInput [(ngModel)]="newTaskTile" (keyup.enter)="addTask()" placeholder="Oque precisa ser feito?">
+    <input #taskInput matInput [(ngModel)]="newTaskTitle" (keyup.enter)="addTask()" placeholder="Oque precisa ser feito?">
   </mat-form-field>
   <mat-form-field appearance="fill" >
     <mat-label>Prioridade</mat-label>
-    <mat-select [(ngmodel)]="newTaskPriority">
+    <mat-select [(ngModel)]="newTaskPriority">
       @for(priority of priorities; track priority){
         <mat-option [value]="priority">{{priority}}</mat-option>
       }
     </mat-select>
   </mat-form-field>
 
-  <button mat-raised-button color="primary" (click)="addTask()" [disabled]="!newTaskTile()" >
+  <button mat-raised-button color="primary" (click)="addTask()" [disabled]="!newTaskTitle()" >
     <mat-icon>add</mat-icon>
     Adicionar
   </button>
@@ -22,13 +22,13 @@
  @for(task of getAllTasks(); track task.id){
   <app-task-item
     [task]="task"
-    (toogle)="toggleTaskStatus(task.id)"
+    (toggle)="toggleTaskStatus(task.id)"
     (delete)="deleteTask(task.id)"
   />
  } @empty {
   <div class="empty-state">
     <mat-icon>task_alt</mat-icon>
-    <p>Nenhuma tarefa encontrada!</p>
+    <p>Vazio!!</p>
   </div>
  }
 </div>
