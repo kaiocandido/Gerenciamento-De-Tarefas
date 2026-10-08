@@ -1,0 +1,45 @@
+match-card {
+  margin-bottom: 12px;
+  transform: all 0.3s ease;
+
+  &.completed {
+    opacity: 0.6;
+
+    .title{
+      text-decoration: line-through;
+    }
+  }
+}
+
+.task-content {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.task-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.baixa{
+  background-color: #e8f5e9 !important;
+  color: #237d32 !important;
+}
+
+.media {
+  background-color: #fff3e0 !important;
+  color: #ef6600 !important;
+}
+
+.alta {
+  background-color: #ffeb3b !important;
+  counter-reset: red !important;
+}
