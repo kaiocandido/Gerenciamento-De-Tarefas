@@ -1,6 +1,5 @@
+import { TaskFilters, TaskPriority, Task } from './../models/Task.models';
 import { computed, effect, Injectable, signal } from "@angular/core";
-import {TaskFilters, TaskPriority } from "../models/task.models";
-import { Task } from '../models/task.models';
 
 @Injectable({
   providedIn: "root",
